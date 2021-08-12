@@ -24,12 +24,12 @@ const transitionStyles = {
 
 const mobileMenuLinks = [
   {
-    name: 'Framsidan',
+    name: 'Hem',
     link: '/'
   },
   {
     name: 'Shop',
-    link: '/product/Yo50sN'
+    link: "/product/Yo50sN"
   },
   {
     name: 'Om Oss',

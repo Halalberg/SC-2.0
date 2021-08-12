@@ -22,7 +22,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'next/router';
 import { CardElement, Elements, ElementsConsumer } from '@stripe/react-stripe-js';
 
-const billingOptions = ['Same as shipping Address', 'Use a different billing address'];
+const billingOptions = ['Samma som leveransadress', 'Ange en annan faktureringsadress'];
 
 /**
  * Render the checkout page
@@ -36,18 +36,18 @@ class CheckoutPage extends Component {
 
       // string property names to conveniently identify inputs related to commerce.js validation errors
       // e.g error { param: "shipping[name]"}
-      'customer[first_name]': 'John',
-      'customer[last_name]': 'Doe',
-      'customer[email]': 'john@doe.com',
+      'customer[first_name]': '',
+      'customer[last_name]': '',
+      'customer[email]': '',
       'customer[phone]': '',
       'customer[id]': null,
-      'shipping[name]': 'John Doe',
-      'shipping[street]': '318 Homer Street',
+      'shipping[name]': '',
+      'shipping[street]': '',
       'shipping[street_2]': '',
-      'shipping[town_city]': 'Vancouver',
-      'shipping[region]': 'BC',
-      'shipping[postal_zip_code]': 'V6B 2V2',
-      'shipping[country]': 'CA',
+      'shipping[town_city]': '',
+      'shipping[region]': '',
+      'shipping[postal_zip_code]': '',
+      'shipping[country]': '',
       'billing[name]': '',
       'billing[street]': '',
       'billing[street_2]': '',
@@ -76,7 +76,7 @@ class CheckoutPage extends Component {
         'shipping[postal_zip_code]': null
       },
 
-      discountCode: 'CUSTOMCOMMERCE',
+      discountCode: 'RABATTKOD',
 
       selectedGateway: 'test_gateway',
       loading: false,
@@ -373,11 +373,11 @@ class CheckoutPage extends Component {
       },
       // collected 'order notes' data for extra field configured in the Chec Dashboard
       extrafields: {
-        extr_j0YnEoqOPle7P6: this.state.orderNotes,
+        extr_DWy4oGyMPl6Jx2: this.state.orderNotes,
       },
       // Add more to the billing object if you're collecting a billing address in the
       // checkout form. This is just sending the name as a minimum.
-      billing: this.state.selectedBillingOption === 'Same as shipping Address' ? shippingAddress : {
+      billing: this.state.selectedBillingOption === 'Samma som leveransadress' ? shippingAddress : {
         name: this.state['billing[name]'],
         country: this.state['billing[country]'],
         street: this.state['billing[street]'],
@@ -541,7 +541,7 @@ class CheckoutPage extends Component {
     return (
       <Root>
         <Head>
-          <title>Checkout</title>
+          <title>Betalning</title>
         </Head>
 
         <div className="custom-container py-5 my-4 my-sm-5">
@@ -552,12 +552,12 @@ class CheckoutPage extends Component {
               <div className="d-flex pb-4 breadcrumb-container">
                 <Link href="/collection">
                   <div className="font-size-caption text-decoration-underline cursor-pointer">
-                    Cart
+                    Kundvagn
                   </div>
                 </Link>
                 <img src="/icon/arrow-right.svg" className="w-16 mx-1" alt="Arrow icon"/>
                 <div className="font-size-caption font-weight-bold cursor-pointer">
-                  Checkout
+                  Betalning
                 </div>
               </div>
               {
@@ -565,13 +565,13 @@ class CheckoutPage extends Component {
                 && (
                   <form onChange={this.handleChangeForm} onSubmit={this.captureOrder}>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Customer
+                      Kund
                     </p>
                     <div className="row">
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            First name*
+                            Förnamn*
                           </p>
                           <input required name="customer[first_name]" autoComplete="given-name" value={this.state['customer[first_name]']} className="rounded-0 w-100" />
                         </label>
@@ -579,7 +579,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Last name*
+                            Efternamn*
                           </p>
                           <input required name="customer[last_name]" autoComplete="family-name" value={this.state['customer[last_name]']} className="rounded-0 w-100" />
                         </label>
@@ -587,11 +587,12 @@ class CheckoutPage extends Component {
                     </div>
                     <div className="row">
                       <div className="col-12 col-sm-6 mb-3">
-                        <label className="w-100">
+                      <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Telephone
+                            Telefonnummer
                           </p>
                           <input
+                         
                             name="customer[phone]"
                             autoComplete="tel"
                             value={this.state['customer[phone]']}
@@ -602,7 +603,7 @@ class CheckoutPage extends Component {
                       <div className="col-12 col-sm-6 mb-3">
                         <label className="w-100">
                           <p className="mb-1 font-size-caption font-color-light">
-                            Email address*
+                            Email*
                           </p>
                           <input
                             required
@@ -615,7 +616,7 @@ class CheckoutPage extends Component {
                       </div>
                     </div>
                     <p className="font-size-subheader font-weight-semibold mb-4">
-                      Shipping Address
+                      Leveransadress
                     </p>
                     <div className="mb-5">
                       <AddressForm
@@ -633,7 +634,7 @@ class CheckoutPage extends Component {
                         <div className="col-12 mb-3">
                           <label className="w-100">
                             <p className="mb-1 font-size-caption font-color-light">
-                              Shipping method*
+                              Leveransalternativ*
                             </p>
                             <Dropdown
                               name="fulfillment[shipping_method]"
@@ -642,12 +643,12 @@ class CheckoutPage extends Component {
                                 ? (`${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_code}`)
                                 : ''
                               }
-                              placeholder="Select a shipping method"
+                              placeholder="Välj en leveransmetod"
                             >
                               {
                                 shippingOptions && shippingOptions.map(option => (
                                   <option key={option.id} value={option.id}>
-                                  { `${option.description} - $${option.price.formatted_with_code}` }
+                                  { `${option.description} - ${option.price.formatted_with_code}` }
                                   </option>
                                 ))
                               }
@@ -659,22 +660,13 @@ class CheckoutPage extends Component {
                         onClick={this.toggleNewsletter}
                         className="d-flex mb-4 flex-nowrap cursor-pointer"
                       >
-                        <Checkbox
-                          onClick={this.toggleNewsletter}
-                          checked={this.state.receiveNewsletter}
-                          className="mr-3"
-                        />
-                        <p>
-                          Receive our news, restocking, good plans and news in your mailbox!
-                          Rest assured, you will not be flooded, we only send one newsletter
-                          per month approximately 🙂
-                        </p>
+                       
                       </div>
                       <label className="w-100 mb-3">
                         <p className="mb-1 font-size-caption font-color-light">
-                          Order notes (optional)
+                          Telefonnummer, krav för leverans med PostNord*
                         </p>
-                        <textarea name="orderNotes" value={this.state.orderNotes} className="rounded-0 w-100" />
+                        <input require name="orderNotes" value={this.state.orderNotes} className="rounded-0 w-100" />
                       </label>
                     </div>
 
@@ -683,7 +675,7 @@ class CheckoutPage extends Component {
                     {/* Billing Address */}
                     { checkout.collects && checkout.collects.billing_address && <>
                       <p className="font-size-subheader font-weight-semibold mb-3">
-                        Billing Address
+                        Faktureringsadress
                       </p>
                       <div className="border border-color-gray400 mb-5">
                         {billingOptions.map((value, index) => (
@@ -702,7 +694,7 @@ class CheckoutPage extends Component {
                           </label>
                         ))}
                       </div>
-                      {this.state.selectedBillingOption === 'Use a different billing address' && (
+                      {this.state.selectedBillingOption === 'Ange en annan faktureringsadress' && (
                         <AddressForm
                           type="billing"
                           countries={this.state.countries}
@@ -718,14 +710,14 @@ class CheckoutPage extends Component {
                     </>}
 
                     <p className="checkout-error">
-                      { !selectedShippingOption ? 'Select a shipping option!' : '' }
+                      { !selectedShippingOption ? 'Välj en leveransmetod!' : '' }
                     </p>
                     <button
                       type="submit"
                       className="bg-black font-color-white w-100 border-none h-56 font-weight-semibold d-lg-block"
                       disabled={!selectedShippingOption}
                     >
-                      Make payment
+                      Betala
                     </button>
                   </form>
                 )
@@ -735,7 +727,7 @@ class CheckoutPage extends Component {
             <div className="col-12 col-lg-5 col-md-10 offset-md-1 mt-4 mt-lg-0">
               <div className="bg-brand200 p-lg-5 p-3 checkout-summary">
                 <div className="borderbottom font-size-subheader border-color-gray400 pb-2 font-weight-medium">
-                  Your order
+                  Din beställning
                 </div>
                 <div className="pt-3 borderbottom border-color-gray400">
                   {(checkout.live ? checkout.live.line_items : []).map((item, index, items) => {
@@ -762,7 +754,7 @@ class CheckoutPage extends Component {
                             </div>
                           </div>
                           <div className="text-right font-weight-semibold">
-                            ${item.line_total.formatted_with_code}
+                            {item.line_total.formatted_with_code}
                           </div>
                         </div>
                       </div>
@@ -788,20 +780,17 @@ class CheckoutPage extends Component {
                 <div className="py-3 borderbottom border-color-black">
                   {[
                     {
-                      name: 'Subtotal',
+                      name: 'Kostnad inkl. 25% moms',
                       amount: checkout.live ? checkout.live.subtotal.formatted_with_symbol : '',
                     },
+
                     {
-                      name: 'Tax',
-                      amount: checkout.live ? checkout.live.tax.amount.formatted_with_symbol : '',
+                      name: 'Frakt',
+                      amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'Ingen leveransmetod vald',
                     },
                     {
-                      name: 'Shipping',
-                      amount: selectedShippingOption ? `${selectedShippingOption.description} - ${selectedShippingOption.price.formatted_with_symbol}` : 'No shipping method selected',
-                    },
-                    {
-                      name: 'Discount',
-                      amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'No discount code applied',
+                      name: 'Rabatt',
+                      amount: (checkout.live && checkout.live.discount && checkout.live.discount.code) ? `Saved ${checkout.live.discount.amount_saved.formatted_with_symbol}` : 'Ingen rabattkod',
                     }
                   ].map((item, i) => (
                     <div key={i} className="d-flex justify-content-between align-items-center mb-2">
@@ -814,10 +803,10 @@ class CheckoutPage extends Component {
                 </div>
                 <div className="d-flex justify-content-between align-items-center mb-2 pt-3">
                   <p className="font-size-title font-weight-semibold">
-                    Total amount
+                   Totalsumma
                   </p>
                   <p className="text-right font-weight-semibold font-size-title">
-                    $ { checkout.live ? checkout.live.total.formatted_with_code : '' }
+                     { checkout.live ? checkout.live.total.formatted_with_code : '' }
                   </p>
                 </div>
               </div>

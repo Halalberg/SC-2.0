@@ -24,15 +24,15 @@ const transitionStyles = {
 
 const mobileMenuLinks = [
   {
-    name: 'Home',
+    name: 'Framsidan',
     link: '/'
   },
   {
     name: 'Shop',
-    link: '/collection'
+    link: '/product/Yo50sN'
   },
   {
-    name: 'About',
+    name: 'Om Oss',
     link: '/about'
   }
 ];
@@ -161,13 +161,7 @@ class Header extends Component {
       );
     }
 
-    return (
-      <Link href="/login">
-        <a className="font-color-black login">
-          Login
-        </a>
-      </Link>
-    );
+
   }
 
   render() {
@@ -184,12 +178,12 @@ class Header extends Component {
           }`}
         >
           <div className="d-none d-sm-flex">
-            <Link href="/collection">
-              <a href="/collection" className="mr-4 font-color-black">Shop</a>
+            <Link href="/product/Yo50sN">
+              <a href="/product/Yo50sN" className="mr-4 font-color-black">Shop</a>
             </Link>
             <Link href="/about">
               <a href="/about" className="font-color-black">
-                About
+                Om Oss
               </a>
             </Link>
           </div>
@@ -203,7 +197,7 @@ class Header extends Component {
             <Link href="/">
               <a>
                 <img
-                  src="/images/commerce.svg"
+                  src="/images/stamp_logga2.png"
                   className="logo cursor-pointer"
                   alt="Logo"
                 />

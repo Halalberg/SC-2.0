@@ -48,9 +48,9 @@ class Confirm extends Component {
     return (
       <div className="py-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Subtotal</p>
+          <p>Kostnad inkl. 25% moms</p>
           <p className="text-right font-weight-medium">
-            ${orderReceipt.order.subtotal.formatted_with_code}
+            {orderReceipt.order.subtotal.formatted_with_code}
           </p>
         </div>
       </div>
@@ -66,9 +66,9 @@ class Confirm extends Component {
     return (
       <div className="pb-3">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <p>Shipping</p>
+          <p>Frakt</p>
           <p className="text-right font-weight-medium">
-            ${orderReceipt.order.shipping.price.formatted_with_code}
+            {orderReceipt.order.shipping.price.formatted_with_code}
           </p>
         </div>
       </div>
@@ -81,10 +81,10 @@ class Confirm extends Component {
     return (
       <div className="d-flex justify-content-between align-items-center mb-2 pt-3 border-top border-color-black">
         <p className="font-size-title font-weight-semibold">
-          Order total
+          Totalsumma
         </p>
         <p className="text-right font-weight-semibold font-size-title">
-          ${orderReceipt.order.total.formatted_with_code}
+          {orderReceipt.order.total.formatted_with_code}
         </p>
       </div>
     );
@@ -108,23 +108,23 @@ class Confirm extends Component {
                   <img src="/icon/check.svg" className="w-40" alt="" />
                 </div>
                 <h3 className="text-center font-family-secondary mb-3">
-                  Thank you for your purchase!
+                  Tack så mycket för ditt köp!
                 </h3>
                 <h4 className="text-center font-size-subheader mb-3">
-                Your order completed successfully
+                Din beställning har gått igenom
                 </h4>
                 <p className="text-center font-color-light mb-5">
-                  Here is your order number for reference: {orderReceipt.customer_reference}
+                  Här är ditt ordernummer för referens: {orderReceipt.customer_reference}
                 </p>
                 <div className="d-flex w-100 justify-content-center flex-column flex-sm-row">
                   <Link href="/">
                     <button className="checkout-confirm-buttons h-48 px-3 flex-grow-1 border bg-white border-color-gray500 font-color-light mb-2 mb-sm-0 mr-sm-2 no-print">
-                      Go back home
+                      Tillbaka till framsidan
                     </button>
                   </Link>
-                  <Link href="/collection">
+                  <Link href="/product/Yo50sN">
                     <button className="checkout-confirm-buttons h-48 px-3 flex-grow-1 bg-black font-color-white no-print">
-                      Continue shopping
+                      Fortsätt handla
                     </button>
                   </Link>
                 </div>
@@ -137,16 +137,16 @@ class Confirm extends Component {
                   <div className="border-bottom border-color-gray400 d-flex justify-content-between align-items-start pb-3 flex-column flex-sm-row">
                     <div>
                       <p className="font-color-light mb-2">
-                        Receipt number: {orderReceipt.customer_reference}
+                        Kvittonummer: {orderReceipt.customer_reference}
                       </p>
-                      <p className="font-size-subheader">Order details</p>
+                      <p className="font-size-subheader">Beställningsdetaljer</p>
                     </div>
                     { this.renderPrintButton() }
                   </div>
                   <div className="border-bottom border-color-gray400 d-flex align-items-start py-4 flex-column flex-sm-row">
                     <div>
                       <p className="font-color-light mr-4 mb-3 mb-sm-0">
-                        Ships to
+                        Skickas till
                       </p>
                     </div>
                     <div className="flex-grow-1">

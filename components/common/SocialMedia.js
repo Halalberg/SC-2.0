@@ -6,19 +6,19 @@ const imagesInfo = [
     translateRatio: -50
   },
   {
-    image: '/images/insta/2.jpg',
+    image: '/images/insta/2.png',
     translateRatio: 30
   },
   {
-    image: '/images/insta/3.jpg',
+    image: '/images/insta/3.png',
     translateRatio: 0
   },
   {
-    image: '/images/insta/4.jpg',
+    image: '/images/insta/4.png',
     translateRatio: -20
   },
   {
-    image: '/images/insta/5.jpg',
+    image: '/images/insta/5.png',
     translateRatio: -80
   }
 ];
@@ -78,14 +78,14 @@ export default class SocialMedia extends React.Component {
                 className="font-size-display1 mb-3"
                 style={{ maxWidth: '26rem' }}
               >
-                Follow us on Instagram for more updates
+                Följ oss på instagram för mer uppdateringar!
               </p>
               <div className="d-flex">
                 <a
-                  href="/about"
+                  href="https://www.instagram.com/shallowcrafts/"
                   className="d-flex py-3 align-items-center font-color-black borderbottom border-color-black"
                 >
-                  <p className="mr-3">Follow us</p>
+                  <p className="mr-3">Följ Oss</p>
                   <img src="/icon/arrow-long-right.svg" alt="Arrow icon"/>
                 </a>
               </div>

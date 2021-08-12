@@ -6,7 +6,7 @@ import Footer from '../components/common/Footer';
 const About = () => (
   <Root>
     <Head>
-      <title>About | commerce</title>
+      <title>About | Shallow Crafts</title>
     </Head>
     <div className="about-container">
       {/* Row */}
@@ -14,26 +14,35 @@ const About = () => (
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
             <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5 justify-content-center">
               <h2 className="font-size-header mb-4">
-                Commerce.js Demo Store
+              Varför hantverksbox?
               </h2>
               <h4 className="font-size-subheader mb-4">
-                This is an open source storefront built using Chec’s headless architecture and the Commerce.js SDK. Commerce.js is a smarter, more efficient way to build eCommerce projects, and we hope you can see that as you explore the world custom eCommerce. Please build on top of, or pick apart this project for your own use. Everything in this project, from the storefront, to the cart, checkout and receipt, is 100% customizable. To build more custom eCommerce projects, using any frontend framework or platform, head over to <a href="https://commercejs.com/" target="_blank" className="cjs-link" rel="noopener noreferrer">commercejs.com</a>.
+              <p>Hantverksboxen är för oss som behöver ett kreativt utlopp, vill testa något nytt men inte vet vart man ska börja.
+                             </p>
+                            <p>  </p>
+                            <p> När man väl har
+                            bestämt sig för att testa ett hantverk men dessutom inte tycker det är kul efter ett tag 
+                            kan det ta emot att behöva exempelvis slänga det som blir över, utifrån ett
+                            miljömässigt -och
+                            ekonomiskt perspektiv. </p>
+                            <p>
+                            Med vår hantverksbox får du testa flera olika hantverk utan att ha onödigt material över.
+                            Vårt syfte är att vara en låg tröskeln in i det kreativa. </p>
+                            <p>
+                            Våra produkter är noggrant utplockade from olika leverantörer utifrån ett kvalitet - och
+                            hållbarhetsperspektiv som sedan sammanställts i ett och samma kit.</p>
+                            <p>
+
+                            Med hantverkskiten får du även instruktioner så du vet hur du ska gå tillväga. Se vår instagram för förslag på vad du kan skapa!</p>
               </h4>
-              <div className="about-cjs mt-3 d-flex flex-row">
-                <a className="px-4 py-3 font-color-white about-doc" href="https://commercejs.com/docs/" target="_blank">
-                  Documentation
-                </a>
-                <a className="px-4 py-3 about-dev" href="https://commercejs.com/docs/community/" target="_blank">
-                  Guides from the community
-                </a>
-              </div>
+
             </div>
           </div>
 
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/cjs-illustration.svg" alt="Commerce.js illustration"/>
+              <img src="/vrf hantverk.png" width="500" alt="Commerce.js illustration"/>
             </div>
           </div>
         </div>
@@ -44,7 +53,7 @@ const About = () => (
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/netlify-illustration.svg" alt="Netlify illustration"/>
+              <img src="/Om OSS.png" width="500" alt="Netlify illustration"/>
             </div>
           </div>
         </div>
@@ -52,16 +61,26 @@ const About = () => (
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
             <h3 className="font-size-header mb-4">
-              Deploy to Netlify
+              Om mig
             </h3>
             <h4 className="font-size-subheader mb-4">
-              If you would like to deploy this project live today, click the button below and watch the magic happen!
+            <p>Jag som grundat Shallow Crafts heter Kristina och är i grunden ekonom. När jag
+                                jobbade som ekonom brukade jag komma hem och längta efter ett kreativt utlopp. </p>
+                                <p>
+                                Jag har varit på drejkurser, målat länge och pysslar mycket hemma. </p>
+                                <p>
+                                Jag minns hur svårt det var att välja exakt vad för hantverk som jag skulle testa och såg att
+                                många pysselkit där ute inte riktigt föll mig i smaken på grund av
+                                hållbarhetsperspektivet men även att kvalitén inte riktigt var det jag sökte. </p>
+
+                               <p> Därför skapade jag detta hantverkskit för att ge andra möjligheten att testa helt olika typer
+                                av hantverk utan att behöva lägga alltför mycket pengar och research inför varje val. </p>
+                                <p>En
+                                liten push
+                                in i det kreativa, en låg tröskel till att testa på något nytt.
+                            </p>
             </h4>
-            <div className="mt-3">
-              <a className="px-4 py-3 flex-grow-1 font-color-white about-net" href="https://app.netlify.com/start/deploy?repository=https://github.com/chec/commercejs-nextjs-demo-store" target="_blank">
-                Deploy to Netlify
-              </a>
-            </div>
+
           </div>
         </div>
       </div>
@@ -71,59 +90,29 @@ const About = () => (
         <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
           <div className="h-100 d-flex flex-column justify-content-center py-5 px-4 px-sm-5">
             <h3 className="font-size-header mb-4">
-              Clone in GitHub
+              Pyssel utan slöseri
             </h3>
             <h4 className="font-size-subheader mb-4">
-            If you would like to clone this project and do a manual setup, go to the repository below!
+            <p>  
+Innehållet i hantverkskitet är tillräckligt för att skapa 1 tvål, 2-4 lerfigurer, 2-4 smycken. 
+Varför vi valt att begränsa innehållet i kitet är att ni ska få möjligheten att lära känna ett hantverk och därefter göra ett eget val om ni vill rikta er in på ett specifikt hantverk eller inte. 
+ </p>
+ <p>
+Allt i hantverkskitet är återanvändningsbart! Följ vår instagram för roliga och användbara tips.</p>
             </h4>
-            <div className="mt-3">
-              <a className="px-4 py-3 flex-grow-1 font-color-white about-gb" href="https://github.com/chec/commercejs-nextjs-demo-store" target="_blank">
-                Clone in GitHub
-              </a>
-            </div>
+
           </div>
         </div>
 
         <div className="col-12 col-lg-6">
           <div className="about-image h-100">
             <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/github-illustration.svg" alt="GitHub illustration"/>
+              <img src="/minimal waste.png" width="500" alt="GitHub illustration"/>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Row 4 */}
-      <div className="row">
-        <div className="col-12 col-lg-6">
-          <div className="about-image h-100">
-            <div className="d-flex align-items-center justify-content-center h-100">
-              <img src="/blog-illustration.svg" alt="Commerce.js blog illustration"/>
-            </div>
-          </div>
-        </div>
-
-        <div className="col-12 col-md-10 col-lg-6 offset-md-1 offset-lg-0 row-content">
-          <div className="h-100 d-flex flex-column py-5 px-4 px-sm-5">
-            <h3 className="font-size-header mb-4">
-              Technical Blog
-            </h3>
-            <h4 className="font-size-subheader mb-4">
-              Read the full technical tutorial here if you want to get into the nitty gritty!
-            </h4>
-            <div className="mt-3">
-              <a
-                className="px-5 py-3 flex-grow-1 font-color-white about-blog"
-                href="https://www.netlify.com/blog/2020/07/09/create-a-fully-fledged-jamstack-commerce-store-with-commerce.js-and-netlify/"
-                target="_blank"
-              >
-                Read Blog
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+</div>
     <Footer />
   </Root>
 );

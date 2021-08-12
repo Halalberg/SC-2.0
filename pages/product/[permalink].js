@@ -17,7 +17,34 @@ import CategoryList from '../../components/products/CategoryList';
 import reduceProductImages from '../../lib/reduceProductImages';
 
 const detailView = `<p>
-  Slightly textured fabric with tonal geometric design and a bit of shine
+Tvål kit: Vit tvålmassa, ekologiskt eterisk lavendelolja, torkade lavendelblommor, silikonform.<br>
+Ler kit: Vit och grå naturlera. 
+<p>Smyckeskit: Glaspärlor, vit och mintgrön bomullstråd, vit tygpåse. </p><br>
+
+
+<p>Detaljer kring innehållet</p> <br>
+Tvålmassa<br>
+INCI: Aqua, Glycerin, Sorbitol, Sodium Stearate,<br>
+ Sodium Laurate, Propylene Glycol, Sodium Oleate,<br>
+  Sodium Myristate, Sodium Chloride, Glyceryl Mono Laurate,<br>
+   Cocamidopropyl Betaine, Cocos Nucifera (Coconut) Oil, <br>
+   Sodium Thiosulphate, Sodium Citrate, Citric Acid, <br>
+   Titanium Dioxide, Trisodium Sulfosuccinate, <br>
+   <p> Pentasodium Pentatate, Tetrasodium Etidronate.</p>
+   <br>
+<p>Tillverkad av Stephenson Personal Care.</p><br>
+
+<p>Ekologisk eterisk lavendel olja
+</p><br>
+Eteriska oljor ska generellt aldrig användas direkt <br>
+på huden utan skall tillsättas i tvålmassan.<br>
+I hudprodukter rekommenderas sammanlagt max 0,5% eterisk olja.<br>
+Lavendeloljan är säker att förtära dock med största försiktighet.<br>
+Dosering av eteriska oljor för invärtes bruk är svår <br>
+då produkten inte är standardiserad och kan variera i styrka.<br>
+Eteriska oljor är giftiga och livsfarliga är för stor dos.<br>
+Eteriska oljor bör förvaras mörkt och svalt.<br>
+
 </p>`;
 
 export default function Product() {
@@ -66,19 +93,20 @@ export default function Product() {
   return (
     <Root>
       <Head>
-        <title>{ product.name } | commerce</title>
+        <title>{ product.name } | Shallow Crafts</title>
       </Head>
 
       <div className="py-5 my-5">
       <div className="main-product-content">
-        {/* Sidebar */}
-        <div className="product-sidebar">
-          <CategoryList
-            className="product-left-aside__category-list"
-            current={ product.categories[0] && product.categories[0].id }
-          />
-          <CarouselImages images={images} />
-        </div>
+ 
+
+          
+
+
+
+
+
+
 
         <div className="product-images">
           <div className="flex-grow-1">
@@ -102,13 +130,12 @@ export default function Product() {
             onClick={toggleShipping}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Shipping and returns
+            Leverans och retur
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showShipping}>
             <div className="pb-4 font-color-medium">
-              Arrives in 5 to 7 days, returns accepted within 30
-              days. For more information, click here.
+              Leveranstid 1-3 vardagar. Fraktkostnad på 59SEK inrikes tillkommer, utrikes 185SEK. För mer information gällande leverans och retur se våra <a href="/terms">villkor.</a>
             </div>
           </Collapse>
           <div className="h-1 border-bottom border-color-black" />
@@ -116,7 +143,7 @@ export default function Product() {
             onClick={toggleDetails}
             className="d-flex cursor-pointer py-3 justify-content-between font-weight-medium"
           >
-            Details
+            Innehållsförteckning
             <img src="/icon/plus.svg" />
           </div>
           <Collapse isOpened={showDetails}>
@@ -132,10 +159,8 @@ export default function Product() {
       </div>
     </div>
 
-    <ClientReview />
-    <SuggestedProducts />
-    <ExploreBanner />
-    <SocialMedia />
+    
+   
     <Footer />
   </Root>
   );

@@ -31,11 +31,11 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" href="https://unpkg.com/swiper@6.6.2/swiper-bundle.min.css" />
           <meta property="og:title" content="Shallow Crafts | Webshop" />
-          <meta property="og:image" content="https://cdn.chec.io/email/assets/marketing/demo-preview.png" />
+          <meta property="og:image" content="" />
           <meta property="og:description" content="Shallow Crafts hantverkskit" />
-          <meta property="og:url" content="https://commercejs-demo-store.netlify.app" />
+          <meta property="og:url" content="https://www.shallowcrafts.com/" />
           <meta property="twitter:title" content="Shallow Crafts | Webshop" />
-          <meta name="twitter:creator" content="@commercejs" />
+          <meta name="twitter:creator" content="" />
           <meta property="twitter:image" content="" />
           <meta property="twitter:description" content="Shallow Crafts hantverkskit" />
           <meta name="twitter:card" content="summary_large_image" />

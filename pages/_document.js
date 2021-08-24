@@ -31,7 +31,7 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" href="https://unpkg.com/swiper@6.6.2/swiper-bundle.min.css" />
           <meta property="og:title" content="Shallow Crafts | Webshop" />
-          <meta property="og:image" content="" />
+          <meta property="og:image" content="../../images/solros.png" />
           <meta property="og:description" content="Shallow Crafts hantverkskit" />
           <meta property="og:url" content="https://www.shallowcrafts.com/" />
           <meta property="twitter:title" content="Shallow Crafts | Webshop" />

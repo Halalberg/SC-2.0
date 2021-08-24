@@ -29,7 +29,7 @@ const mobileMenuLinks = [
   },
   {
     name: 'Shop',
-    link: "/product/Yo50sN"
+    link: '/product'
   },
   {
     name: 'Om Oss',

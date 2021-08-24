@@ -35,8 +35,8 @@ class MyDocument extends Document {
           <meta property="og:description" content="Shallow Crafts hantverkskit" />
           <meta property="og:url" content="https://www.shallowcrafts.com/" />
           <meta property="twitter:title" content="Shallow Crafts | Webshop" />
-          <meta name="twitter:creator" content="" />
-          <meta property="twitter:image" content="" />
+          <meta name="twitter:creator" content="../../images/solros.png" />
+          <meta property="twitter:image" content="../../images/solros.png" />
           <meta property="twitter:description" content="Shallow Crafts hantverkskit" />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>

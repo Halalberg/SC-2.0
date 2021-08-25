@@ -29,7 +29,7 @@ const mobileMenuLinks = [
   },
   {
     name: 'Shop',
-    link: '/collection'
+    link: '/'
   },
   {
     name: 'Om Oss',

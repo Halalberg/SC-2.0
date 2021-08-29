@@ -48,6 +48,16 @@ class MyDocument extends Document {
 <meta property="twitter:title" content="Shallow Crafts | Webshop">
 <meta property="twitter:description" content="Kreativitet för dig och ditt hem">
 <meta property="twitter:image" content="../../images/solros.png">
+      
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WGNJNTM828"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WGNJNTM828');
+</script>
         </Head>
         <body>
           <Main />

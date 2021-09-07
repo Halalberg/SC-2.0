@@ -7,6 +7,7 @@ import { Transition } from 'react-transition-group';
 import { connect } from 'react-redux'
 import { clearCustomer } from '../../store/actions/authenticateActions';
 
+
 const duration = 300;
 
 const defaultStyle = {

@@ -12,7 +12,6 @@ const Home = () => (
       <title>Collection</title>
     </Head>
     <Collections />
-
     <SocialMedia />
     <Footer />
   </Root>

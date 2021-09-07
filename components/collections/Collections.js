@@ -76,7 +76,6 @@ class Collections extends Component {
       </>
     );
   }
-
   /**
    * Filter products by category
    */

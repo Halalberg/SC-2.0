@@ -22,7 +22,7 @@ return (
           <h1>SHALLOW CRAFTS</h1>
            <p>Kreativitet för dig och ditt hem</p>
 
-           <Link href="/collection">
+           <Link href="/product/Yo50sN">
            <button className='hero-btns'> Shop </button>
            </Link>
 

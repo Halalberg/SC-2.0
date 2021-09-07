@@ -156,3 +156,5 @@ class Collections extends Component {
 
 export default connect(state => state)(Collections);
 
+
+

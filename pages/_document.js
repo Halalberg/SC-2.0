@@ -30,34 +30,24 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="stylesheet" href="https://unpkg.com/swiper@6.6.2/swiper-bundle.min.css" />
-<!-- Primary Meta Tags -->
+
 <title>Shallow Crafts | Webshop</title>
 <meta name="title" content="Shallow Crafts | Webshop">
 <meta name="description" content="Kreativitet för dig och ditt hem">
 
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.shallowcrafts.com/">
 <meta property="og:title" content="Shallow Crafts | Webshop">
 <meta property="og:description" content="Kreativitet för dig och ditt hem">
 <meta property="og:image" content="../../images/solros.png">
 
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://www.shallowcrafts.com/">
 <meta property="twitter:title" content="Shallow Crafts | Webshop">
 <meta property="twitter:description" content="Kreativitet för dig och ditt hem">
 <meta property="twitter:image" content="../../images/solros.png">
       
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WGNJNTM828"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-WGNJNTM828');
-</script>
         </Head>
         <body>
           <Main />
